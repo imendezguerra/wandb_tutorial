@@ -2,7 +2,7 @@
 
 Author: Irene Mendez Guerra (irene.mendez17@imperial.ac.uk)
 
-[W&B interactive dashboard](https://wandb.ai/icl_img_public/wandb_tutorial/workspace?nw=67suic1q9g8)
+[W&B interactive dashboard](https://wandb.ai/icl_img_public/wandb_tutorial/workspace?nw=67suic1q9g8) | 
 [Notebook](https://github.com/imendezguerra/wandb_tutorial/blob/main/wandb_tutorial.ipynb)
 
 Resources:
