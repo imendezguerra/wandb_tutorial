@@ -1,4 +1,4 @@
-# Weights and biases (wandb) tutorial
+# Weights and biases (wandb package) tutorial
 
 Author: Irene Mendez Guerra (irene.mendez17@imperial.ac.uk)
 
