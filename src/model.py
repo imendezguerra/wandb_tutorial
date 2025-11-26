@@ -56,7 +56,7 @@ def mode_check(mode):
             yield
 
 
-def run_one_epoch(model, loader, optimizer, mode):
+def run_one_epoch(model, loader, optimizer, epoch, mode):
     # Set model mode
     if mode:
         model.train()
@@ -67,9 +67,14 @@ def run_one_epoch(model, loader, optimizer, mode):
     total_loss = 0.0
     correct = 0
     total = 0
+    aux = {
+        'loss_batch': [],
+        'batch_epoch': [],
+        'batch_step': [],
+    }
 
     with mode_check(mode):
-        for step, (X_batch, y_batch) in enumerate(loader):
+        for batch_idx, (X_batch, y_batch) in enumerate(loader):
 
             # Run model for every batch
             logits = model(X_batch)
@@ -81,6 +86,12 @@ def run_one_epoch(model, loader, optimizer, mode):
                 loss.backward()
                 optimizer.step()
 
+                # Store loss batch
+                if batch_idx % 10 == 0:
+                    aux['loss_batch'].append(loss.item())
+                    aux['batch_epoch'].append(epoch)
+                    aux['batch_step'].append(epoch * len(loader) + batch_idx)
+
             # Compute loss
             total_loss += loss.item() * X_batch.size(0)
             preds = logits.argmax(dim=1)
@@ -89,4 +100,4 @@ def run_one_epoch(model, loader, optimizer, mode):
 
     avg_loss = total_loss / total
     acc = correct / total
-    return avg_loss, acc
+    return avg_loss, acc, aux
