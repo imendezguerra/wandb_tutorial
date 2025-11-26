@@ -2,8 +2,10 @@
 
 Author: Irene Mendez Guerra (irene.mendez17@imperial.ac.uk)
 
+[Notebook](https://github.com/imendezguerra/wandb_tutorial/blob/main/wandb_tutorial.ipynb) |
 [W&B interactive dashboard](https://wandb.ai/icl_img_public/wandb_tutorial/workspace?nw=67suic1q9g8) | 
-[Notebook](https://github.com/imendezguerra/wandb_tutorial/blob/main/wandb_tutorial.ipynb)
+[W&B report](https://wandb.ai/icl_img_public/wandb_tutorial/reports/Tutorial-report--VmlldzoxNTE4Mzc5NQ)
+
 
 Resources:
 - [W&B main page](https://wandb.ai)
